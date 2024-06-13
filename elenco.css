@@ -1,0 +1,610 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    transition: 1s;
+    
+  }
+ .titulo-logo{
+  width: 30px;
+  height: 50px;
+ }
+  p{
+    text-align: center;
+    font-size: 18px;
+    transition:transform 1s;
+  }
+  body {
+  
+    height: 100vh;
+        background-color: #000;
+        transition: transform 1s, opacity 0.3s;
+  }
+  .interface {
+    max-width: 1280px;
+    margin: 0 auto;
+    transition: transform 1s, opacity 0.3s;
+  }
+  .flex {
+    display: flex;
+  }
+  .btn-contato button {
+    padding: 10px 40px;
+    font-size: 21px;
+    font-weight: 600;
+    background-color: #fff;
+    color: #000;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  button:hover,
+  form .btn-enviar input:hover {
+    box-shadow: 0px 0px 8px none;
+    transform: scale(1.05);
+  }
+  h2.titulo {
+    color: white;
+    font-size: 38px;
+    text-align: center;
+  }
+  h1{
+    color: white;
+    font-size: 38px;
+    text-align: center;
+  }
+  h2{
+    color: white;
+    font-size: 38px;
+    text-align: center;
+  }
+  h3{
+    color: white;
+    font-size: 38px;
+    text-align: center;
+  }
+  h2.titulo span {
+    color: #000;
+  }
+  .cookies-msg{
+      width: 100%;
+      background-color: #fff;
+      position: fixed;
+      bottom: 5%;
+      left: 50%;
+      transform: translate(-50%);
+      border-radius: 15px;
+      display: none;
+  }
+  
+  .cookies-msg.mostrar{
+      display: block;
+  }
+  
+  .cookies-msg .cookies-txt{
+      display: flex;
+      align-items: center;
+      text-align: justify;
+      padding: 20px;
+  }
+  
+  .cookies-msg .cookies-btn{
+      margin-left: 30px;
+  }
+  
+  .cookies-msg .cookies-btn button{
+      background-color: red;
+      color: #fff;
+      font-weight: 700;
+      font-size: 18px;
+      padding: 10px 40px;
+      cursor: pointer;
+      transition: .2s;
+     display: block;
+  }
+  
+  .cookies-msg .cookies-btn button:hover{
+      transform: scale(0.9);
+  }
+  /*estilo do cabeÃ§alho*/
+  header {
+    width: 100%;
+    padding: 15px 4%;
+    top: 0;
+    left: 0;
+    transition: 3s;
+  }
+  header.rolagem{
+    background-color: white;
+     padding: 15px 4%;
+     position:fixed;
+   }
+   header.rolagem a{
+     color: black;
+   }
+   header.rolagem a, header.rolagem i{
+     color: black;
+   }
+  header > .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    width: 50px;
+    height: 60px;
+    
+  }
+  header a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.2s;
+  }
+  header a:hover {
+    color: red;
+    transform: scale(1.05);
+  }
+  header nav.menu-desktop ul {
+    list-style-type: none;
+  }
+  header nav.menu-desktop ul li {
+    display: inline-block;
+    padding: 0 40px;
+  }
+  
+  /*menu mobile*/
+  .btn-abrir-menu i{
+    color: white;
+    font-size: 40px;
+  }
+  .menu-mobile{
+    background: black;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    width: 0%;
+    overflow: hidden;
+    transition: .5s;
+  }
+  .menu-mobile.abrir-menu{
+   width: 70%;
+   color: white;
+  }
+  .menu-mobile.abrir-menu ~ .overlay-menu{
+    display: block;
+  }
+  .menu-mobile .btn-fechar{
+    padding: 20px 4%;
+  }
+  .menu-mobile .btn-fechar i{
+    color: white;
+    font-size: 30px;
+  
+  }
+  .menu-mobile nav ul{
+    text-align:right;
+  }
+  
+  .menu-mobile nav ul li a{
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    display: block;
+  }
+  .menu-mobile nav ul li a:hover{
+    background-color: white;
+    color: black;
+  }
+  
+  .overlay-menu{
+    background-color: #00000098;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 8888;
+    display: none;
+  }
+  /*topo do site*/
+  .banner{
+    height: 100vh;
+    background-image: url(IMAGENS/elenco.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+  }
+  section.topo-do-site .btn-enviar{
+    color: white;
+    background-color: red;
+    border-radius: 2px;
+    align-items: left;
+    text-align: left;
+  }
+  section.topo-do-site {
+    padding: 40px 4%;
+  }
+  section.topo-do-site .flex {
+    align-items: left;
+    text-align: left;
+    justify-content: center;
+    gap: 90px;
+  }
+  .topo-do-site h1 {
+    color: #fff;
+    font-size: 42px;
+    line-height: 40px;
+    text-align: left;
+    align-items: left;
+  }
+  .topo-do-site .txt-topo-site h1 span {
+    color: red;
+    font-size: 50px;
+    text-align: left;
+  }
+  .topo-do-site .txt-topo-site p {
+    margin: 40px 0px;
+    color: #fff;
+    text-align: left;
+  }
+  
+  .topo-do-site .img-topo-site {
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+  
+  }
+  @keyframes flutuar {
+    0% {
+      top: 0;
+    }
+    100% {
+      top: 30px;
+    }
+  }
+/*proximo jogo*/
+section.proximo .btn-ver{
+  color: red;
+  background-color: none;
+  border: none;
+
+}
+section.proximo{
+  padding: 80px 5%;
+  background-color: #fff;
+}
+section.proximo .flex {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 90px;
+}
+.proximo h1 {
+  color: #000;
+  font-size: 42px;
+  line-height: 40px;
+  text-align: center;
+}
+.proximo .txt-proximo h1 span {
+  color: red;
+  font-size: 50px;
+  text-align: center;
+}
+.proximo .txt-proximo p {
+  margin: 40px 0;
+  color: #fff;
+  text-align: left;
+}
+
+.proximo .SPX{
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 90px;
+  width: 300px;
+ 
+}
+/*cadastro*/
+.wp-element-caption{
+  color: white;
+}
+.wp-block-image{
+  margin-top: 40px;
+  padding: 80px 4%;
+gap: 20px;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+  position: static;
+}
+.banner{
+  height: 100%;
+  width: 100%;
+  align-items: center;
+}
+
+  /*estilo footer*/
+
+footer {
+    padding: 60px 4%;
+    box-shadow: 0 0 40px 10px #fff;
+  }
+  footer .flex {
+    justify-content: space-between;
+  }
+  .logo-footer {
+    width: 50px;
+    height: 60px;
+  }
+  footer .line-footer {
+    padding: 20px 0px;
+    border-bottom: 2px solid #000;
+  }
+  footer .line-footer .btn-social {
+    padding: 20px 0px;
+
+    border-bottom: 2px solid #000;
+  }
+  footer .line-footer p i {
+    color: #000;
+    font-size: 22px;
+  }
+  footer .line-footer p a {
+    color: white;
+    font-size: 20px;
+  }
+  .borda {
+    border-top: 2px solid #000;
+  }
+  .container{
+    max-width: 1170px;
+    margin:auto;
+  }
+  .row{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  ul{
+    list-style: none;
+  }
+  .footer{
+    margin-top: 180px;
+    background-color: #000;
+  }
+  .footer-col{
+     width: 35%;
+  }
+  .footer-col .social-links a img{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    line-height: 40px;
+    margin: 20px;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+  }
+  
+  .footer-col .social-links a img{
+    color: #24262b;
+    background-color: none;
+    position: center;
+  }
+  .footer .btn-social{
+    border: white;
+    background-color: red;
+    color: white;
+  }
+  /* problema*/
+  .footer-col h4{
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: fixed;
+  }
+  
+  .footer-col h4::before{
+    content: '';
+    position: absolute;
+    left:0;
+    bottom: -10px;
+    background-color: #fff;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+  }
+  .h4_footer{
+    font-size: 20px;
+    color: #fff;
+    font-family: 'pacifico' cursive ;
+    margin: 5px;
+  }
+  /* problema*/
+  .footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+  }
+  .footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  .footer-col ul li a:hover{
+    color: #ffffff;
+    padding-left: 8px;
+  }
+  .footer-col .social-links a img{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    line-height: 40px;
+    margin: 20px;
+    border-radius: 50%;
+    color: red;
+    transition: all 0.5s ease;
+  }
+  
+  .footer-col .social-links a img{
+    color: #24262b;
+    background-color: none;
+    position: center;
+  }
+  .btn-social button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: red;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    margin: 0px 10px;
+    transition: 0.2s;
+  }
+  .sobre .txt-sobre .btn-social button:hover {
+    box-shadow: 0px 0px 8px red;
+    transform: scale(1.05);
+  }
+  .fim{
+    color: white;
+    margin: 20px;
+    text-align: center;
+  }
+  /*responsive*/
+  @media(max-width: 1020px){
+    .footer-col{
+      width: 50%;
+      margin-bottom: 30px;
+  }
+  @media screen and (max-width: 1020px){
+    /*classe geral*/
+    .flex {
+      flex-direction: column;
+    }
+    .topo-do-site .flex {
+      flex-direction: column-reverse;
+    }
+    h2.titulo{
+      font-size: 34px;
+      line-height: 35px;
+    }
+    /*cabeÃ§alho*/
+    .menu-desktop,
+    .btn-contato {
+      display: none;
+    }
+    btn-abrir-menu{
+        display: block;
+    }
+    /*topo do site*/
+    .section .topo-do-site .flex {
+      gap: 40px;
+    }
+    section.topo-do-site {
+      padding: 20px 9px;
+    }
+    .topo-do-site h1 {
+      font-size: 30px;
+    }
+    .topo-do-site .img-topo-site img {
+      width: 100%;
+    }
+    /*especialidades*/
+    section.especialidades {
+      padding: 40px 8%;
+    }
+    /*sobre*/
+    section.sobre{
+      padding: 40px 8%;
+    }
+    .sobre .txt-sobre h2{
+      font-size: 34px;
+      line-height: 35px;
+      text-align: center;
+    }
+    .btn-social{
+      text-align: center;
+    }
+    .img-sobre img{
+      width: 100%;
+    }
+    /*PORTFOLIO*/
+  section.portfolio{
+    padding: 80px 8% ;
+  }
+  .img-port{
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  
+  }
+  section.portfolio .flex{
+  gap: 60px;
+  }
+  /* FOOTER */
+  footer .flex{
+    flex-direction: column;
+    gap: 30px;
+  }
+  footer .line-footer{
+    text-align: center;
+  
+  }
+  /*cookies*/
+    .cookies-msg{
+        width: 100;
+        background-color: #fff;
+        position: fixed;
+        bottom: 5%;
+        left: 50%;
+        transform: translate(-50%);
+        border-radius: 15px;
+        display: none;
+    }
+  
+    .cookies-msg.mostrar{
+        display: block;
+    }
+  
+    .cookies-msg .cookies-txt{
+        display: flex;
+        align-items: center;
+        text-align: justify;
+        padding: 20px;
+    }
+  
+    .cookies-msg .cookies-btn{
+        margin-left: 30px;
+    }
+  
+    .cookies-msg .cookies-btn button{
+        background-color: red;
+        color: #fff;
+        font-weight: 200;
+        font-size: 10px;
+        padding: 10px 40px;
+        cursor: pointer;
+        transition: .2s;
+      z-index: 100000;
+    }
+  
+  }
+}
